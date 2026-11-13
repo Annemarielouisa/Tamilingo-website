@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Register - Learn Tamil</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;700&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="layout.css">
+  <script src="theme.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="logo" lang="ta">த</span>Learn Tamil</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="index.html#features">Features</a>
+      <a href="index.html#how">How it works</a>
+      <a href="home.html">Dashboard</a>
+      <a href="register.html">Register</a>
+      <a href="signin.html">Sign in</a>
+      <button id="theme-toggle" type="button">Dark</button>
+    </nav>
+  </header>
+
+  <main class="form-page">
+    <div class="panel">
+      <h1>Register</h1>
+      <div id="alert" class="alert" hidden role="alert"></div>
+      <form id="register-form" novalidate>
+        <label>Full name
+          <input id="fullName" name="fullName" autocomplete="name">
+        </label>
+        <label>Employee / Register ID
+          <input id="empId" name="empId" autocomplete="off">
+        </label>
+        <label>Email address
+          <input id="email" name="email" type="email" autocomplete="email">
+        </label>
+        <label>Mobile number
+          <input id="mobile" name="mobile" type="tel" inputmode="numeric" autocomplete="tel">
+        </label>
+        <label>Division
+          <select id="dept" name="dept">
+            <option value="">Select division</option>
+            <option>CSE</option>
+            <option>IT</option>
+            <option>ECE</option>
+            <option>EEE</option>
+            <option>Mechanical</option>
+            <option>Civil</option>
+          </select>
+        </label>
+        <label>Password
+          <input id="password" name="password" type="password" autocomplete="new-password">
+        </label>
+        <label>Confirm password
+          <input id="confirm" name="confirm" type="password" autocomplete="new-password">
+        </label>
+        <button type="submit" class="primary" disabled>Register</button>
+      </form>
+      <p>Already registered? <a href="signin.html">Sign in</a></p>
+    </div>
+  </main>
+
+  <script src="validation.js"></script>
+  <script src="auth.js"></script>
+  <script src="chatbot.js"></script>
+</body>
+</html>

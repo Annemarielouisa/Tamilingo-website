@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Feedback - Learn Tamil</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;700&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="layout.css">
+  <script src="theme.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="logo" lang="ta">த</span>Learn Tamil</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="index.html#features">Features</a>
+      <a href="index.html#how">How it works</a>
+      <a href="home.html">Dashboard</a>
+      <a href="register.html">Register</a>
+      <a href="signin.html">Sign in</a>
+      <button id="theme-toggle" type="button">Dark</button>
+    </nav>
+  </header>
+
+  <main class="form-page">
+    <div class="panel">
+      <h1>Share Your Feedback</h1>
+      <form id="feedback-form" action="/submit-feedback" method="POST">
+        <label>Full name
+          <input id="name" name="name" placeholder="Louisa Hiwatari" autocomplete="name" required>
+        </label>
+
+        <label>Email address
+          <input id="email" name="email" type="email" placeholder="louisa@example.com" autocomplete="email" required>
+        </label>
+
+        <label>Feedback topic
+          <select id="category" name="category">
+            <option value="general">General Experience</option>
+            <option value="bug">Bug Report</option>
+            <option value="feature">Feature Request</option>
+          </select>
+        </label>
+
+        <fieldset class="rating">
+          <legend>How satisfied are you with the vocabulary?</legend>
+          <label class="radio"><input type="radio" name="vocabulary" value="satisfied" required> Satisfied</label>
+          <label class="radio"><input type="radio" name="vocabulary" value="neutral"> Neutral</label>
+          <label class="radio"><input type="radio" name="vocabulary" value="dissatisfied"> Dissatisfied</label>
+        </fieldset>
+
+        <fieldset class="rating">
+          <legend>How satisfied are you with the accuracy?</legend>
+          <label class="radio"><input type="radio" name="accuracy" value="satisfied" required> Satisfied</label>
+          <label class="radio"><input type="radio" name="accuracy" value="neutral"> Neutral</label>
+          <label class="radio"><input type="radio" name="accuracy" value="dissatisfied"> Dissatisfied</label>
+        </fieldset>
+
+        <label>Comments or suggestions
+          <textarea id="message" name="message" rows="4" placeholder="Tell us what you think..." required></textarea>
+        </label>
+
+        <button type="submit" class="primary">Submit feedback</button>
+      </form>
+    </div>
+  </main>
+
+  <script src="chatbot.js"></script>
+</body>
+</html>

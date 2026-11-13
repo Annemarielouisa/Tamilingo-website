@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sign up - Learn Tamil</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;700&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="layout.css">
+  <script src="theme.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="logo" lang="ta">த</span>Learn Tamil</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="index.html#features">Features</a>
+      <a href="index.html#how">How it works</a>
+      <a href="home.html">Dashboard</a>
+      <a href="register.html">Register</a>
+      <a href="signin.html">Sign in</a>
+      <button id="theme-toggle" type="button">Dark</button>
+    </nav>
+  </header>
+
+  <main class="form-page">
+    <div class="panel">
+      <h1>Sign up</h1>
+      <div id="alert" class="alert" hidden role="alert"></div>
+      <form id="signup-form" novalidate>
+        <label>Email address
+          <input id="email" name="email" type="email" autocomplete="email">
+        </label>
+        <label>Create password
+          <input id="password" name="password" type="password" autocomplete="new-password">
+        </label>
+        <label class="check">
+          <span><input id="terms" name="terms" type="checkbox"> I agree to the Terms of Service</span>
+        </label>
+        <button type="submit" class="primary" disabled>Create account</button>
+      </form>
+      <p>Have an account? <a href="signin.html">Sign in</a></p>
+    </div>
+  </main>
+
+  <script src="validation.js"></script>
+  <script src="auth.js"></script>
+  <script src="chatbot.js"></script>
+</body>
+</html>

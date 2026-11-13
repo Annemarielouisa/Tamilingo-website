@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard - Tamilingo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;700&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="layout.css">
+  <script src="theme.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <button id="menu-btn" type="button" aria-label="Open menu" aria-expanded="false">Menu</button>
+    <a class="brand" href="index.html"><span class="logo" lang="ta">த</span>Learn Tamil</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <span id="user-label"></span>
+      <a id="auth-link" href="signin.html">Sign in</a>
+      <button id="theme-toggle" type="button">Dark</button>
+    </nav>
+  </header>
+
+  <div class="dashboard">
+    <!-- Left column: topics (hamburger drawer on mobile) -->
+    <aside id="sidebar" aria-label="Topics">
+      <h2>Topics</h2>
+      <nav id="topics" class="side-nav">
+  <button data-set="vowels" class="active">Vowels</button>
+  <button data-set="consonants">Consonants</button>
+  <button data-set="numbers">Numbers</button>
+  <button data-set="words">Words</button>
+  <button data-set="sentences">Sentences</button>
+  <button data-set="slang">Slang</button>
+</nav>
+    </aside>
+
+    <!-- Middle column: learning -->
+    <main class="center">
+      <nav id="subtopics" class="chips" aria-label="Groups" hidden></nav>
+      <nav id="modes" class="chips" aria-label="Mode">
+        <button data-mode="cards" class="active">Flashcards</button>
+        <button data-mode="quiz">Quiz</button>
+      </nav>
+
+      <section id="cards-view">
+        <p id="counter"></p>
+        <div class="card">
+          <p id="tamil" class="tamil" lang="ta"></p>
+          <p id="answer"></p>
+        </div>
+        <div class="row">
+          <button id="prev">Back</button>
+          <button id="flip">Show answer</button>
+          <button id="next">Next</button>
+        </div>
+      </section>
+
+      <section id="quiz-view" hidden>
+        <p id="score"></p>
+        <div class="card">
+          <p id="quiz-tamil" class="tamil" lang="ta"></p>
+        </div>
+        <div id="options"></div>
+        <p id="feedback" aria-live="polite"></p>
+        <div class="row">
+          <button id="quiz-next" hidden>Next question</button>
+          <button id="reset">Reset score</button>
+        </div>
+      </section>
+    </main>
+
+    <!-- Right column: progress + calculator -->
+    <aside class="right" aria-label="Tools">
+      <div class="panel">
+        <h2>Progress</h2>
+        <p id="stats"></p>
+      </div>
+      <div class="panel">
+        <h2>Calculator</h2>
+        <div id="calculator"></div>
+      </div>
+    </aside>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="auth.js"></script>
+  <script src="calculator.js"></script>
+  <script src="chatbot.js"></script>
+  <script src="learn.js"></script>
+</body>
+</html>
